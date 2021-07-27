@@ -8,7 +8,7 @@ echo Installing OpenQA on Fedora
 echo Running on: $release
 
 #sudo dnf update -y 
-sudo dnf install -y git vim openssh-server openqa openqa-httpd openqa-worker fedora-messaging libguestfs-tools libguestfs-xfs python3-fedfind python3-libguestfs libvirt-daemon-config-network libvirt-python3 virt-install withlock postgresql-server fedora-messaging
+sudo dnf install -y git vim openssh-server openqa openqa-httpd openqa-worker fedora-messaging libguestfs-tools libguestfs-xfs python3-fedfind python3-libguestfs libvirt-daemon-config-network libvirt-python3 virt-install withlock postgresql-server fedora-messaging perl-REST-Client
 
 cd /etc/httpd/conf.d/
 sudo cp openqa.conf.template openqa.conf
