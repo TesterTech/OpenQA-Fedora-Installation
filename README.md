@@ -7,9 +7,9 @@ PART ONE install OpenQA on local VM and get the fist test running.
 
 - Since you are already looking at this README I assume you gave some basic knowledge about version control.
 - Clone this repo in the Client VM
-- Run ```./install-openqa.sh```
+- Run ```sudo ./install-openqa.sh```
 - Go to localhost using the browser and click login
-- Run ```./install-openqa-post.sh``` 
+- Run ```sudo ./install-openqa-post.sh``` 
 - This takes longer! But after it completes should give out of the box test.
 
 ## References 
