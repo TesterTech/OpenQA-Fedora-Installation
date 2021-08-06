@@ -24,22 +24,14 @@ EOF
 
 postgresql-setup --initdb
 
-sudo systemctl start sshd
-sudo systemctl start postgresql
-sudo systemctl start httpd
-sudo systemctl start openqa-gru
-sudo systemctl start openqa-scheduler
-sudo systemctl start openqa-websockets
-sudo systemctl start openqa-webui
-sudo systemctl start fm-consumer@fedora_openqa_scheduler
-sudo systemctl enable postgresql
-sudo systemctl enable httpd
-sudo systemctl enable openqa-gru
-sudo systemctl enable openqa-scheduler
-sudo systemctl enable openqa-websockets
-sudo systemctl enable openqa-webui
-sudo systemctl enable fm-consumer@fedora_openqa_scheduler
-sudo systemctl enable sshd
+sudo systemctl enable --now postgresql
+sudo systemctl enable --now httpd
+sudo systemctl enable --now openqa-gru
+sudo systemctl enable --now openqa-scheduler
+sudo systemctl enable --now openqa-websockets
+sudo systemctl enable --now openqa-webui
+sudo systemctl enable --now fm-consumer@fedora_openqa_scheduler
+sudo systemctl enable --now sshd
 
 sudo firewall-cmd --add-port=80/tcp
 sudo firewall-cmd --runtime-to-permanent
