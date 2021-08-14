@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-# Test scrip based on installation guide from Fedora:
+# Test script based on installation guide from Fedora:
 # https://fedoraproject.org/wiki/OpenQA_direct_installation_guide
 export release=$(uname -a)
 echo Installing OpenQA on Fedora 
