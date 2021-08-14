@@ -40,7 +40,8 @@ sudo systemctl restart httpd
 
 echo Note! the api key will expire in one day after installation!
 
-sudo bash -c "cat >/etc/openqa/client.conf <<'EOF'[localhost]
+sudo bash -c "cat >/etc/openqa/client.conf <<'EOF'
+[localhost]
 key = 1234567890ABCDEF 
 secret = 1234567890ABCDEF 
 EOF"
