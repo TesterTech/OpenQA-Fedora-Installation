@@ -14,15 +14,15 @@ cd /etc/httpd/conf.d/
 sudo cp openqa.conf.template openqa.conf
 sudo cp openqa-ssl.conf.template openqa-ssl.conf
 
-sudo cat << EOF >  /etc/openqa/openqa.ini 
+sudo bash -c "cat >/etc/openqa/openqa.ini <<'EOF'
 [global]
 branding=plain
 download_domains = fedoraproject.org
 [auth]
 method = Fake
-EOF
+EOF"
 
-postgresql-setup --initdb
+sudo postgresql-setup --initdb
 
 sudo systemctl enable --now postgresql
 sudo systemctl enable --now httpd
@@ -40,11 +40,10 @@ sudo systemctl restart httpd
 
 echo Note! the api key will expire in one day after installation!
 
-sudo cat << EOF >  /etc/openqa/client.conf 
-[localhost]
+sudo bash -c "cat >/etc/openqa/client.conf <<'EOF'[localhost]
 key = 1234567890ABCDEF 
 secret = 1234567890ABCDEF 
-EOF
+EOF"
 
 echo "Done, preparations. Now log in one time! Then run sudo ./install-openqa-post.sh"
 
